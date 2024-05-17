@@ -1,11 +1,16 @@
-import React from 'react'
+import Column from "./components/Column"
+
 
 function App() {
+
   return (
-    <div>
-      <h1>Zustand Tutorial</h1>
+    <div className='bg-tertiary text-secondary min-h-screen flex justify-center items-start'>
+      <Column state="PLANNED" />
+      <Column state="ONGOING" />
+      <Column state="DONE" /> 
+      
     </div>
   )
 }
 
-export default App
+export default App 
