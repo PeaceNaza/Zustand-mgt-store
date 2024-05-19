@@ -4,10 +4,11 @@ import Column from "./components/Column"
 function App() {
 
   return (
-    <div className='bg-tertiary text-secondary min-h-screen flex justify-center items-start'>
+    <div className='bg-tertiary min-h-screen flex justify-center items-start'>
+      
       <Column state="PLANNED" />
       <Column state="ONGOING" />
-      <Column state="DONE" /> 
+      <Column state="DONE" />
       
     </div>
   )
