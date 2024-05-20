@@ -1,4 +1,5 @@
 import Column from "./components/Column"
+import "../src/Styles/App.css"
 
 
 function App() {

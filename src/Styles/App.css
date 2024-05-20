@@ -1,13 +1,28 @@
 .PLANNED {
-  background-color: var(--color-tertiary);
+  background-color: rgb(83, 83, 249);
 } 
 
 .ONGOING {
-  background-color: rgb(227, 102, 102);
+  background-color: rgb(237, 37, 37);
 
 } 
 
 .DONE {
-  background-color: rgb(85, 244, 85);
+  background-color: rgb(39, 202, 39);
 } 
 
+.column {
+  border: dashed transparent 3px;
+}
+
+.column.drop {
+  border-color: white;
+} 
+
+@media screen and (max-width: 400px) {
+  .bg-tertiary {
+    display: flex;
+    flex-direction: column;
+   width: auto;
+  }
+}
