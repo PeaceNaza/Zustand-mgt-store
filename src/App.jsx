@@ -5,7 +5,8 @@ import "../src/Styles/App.css"
 function App() {
 
   return (
-    <div className='bg-tertiary min-h-screen flex justify-center items-start'>
+    
+    <div className='container bg-tertiary min-h-screen min-w-screen flex justify-center items-start'>
       
       <Column state="PLANNED" />
       <Column state="ONGOING" />

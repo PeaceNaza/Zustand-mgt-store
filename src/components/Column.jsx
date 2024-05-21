@@ -24,7 +24,7 @@ const moveTask = useStore((store) => store.moveTask);
 
   return (
 
-    <div className={ classNames("column bg-primary shadow-lg min-h-[20rem] w-[33%] max-w-[20rem] my-0 mx-[0.5rem] rounded-md p-3 mt-5", {drop: drop})}
+    <div className={ classNames("column bg-primary shadow-lg min-h-[20rem] w-[100%] max-w-[20rem] my-0 mx-[0.5rem] rounded-md p-3 mt-5", {drop: drop})}
      onDragOver={(e) => {
       setDrop(true);
       e.preventDefault();
@@ -36,6 +36,8 @@ const moveTask = useStore((store) => store.moveTask);
     }}
 
       onDrop={(e) => { 
+        e.preventDefault();
+        setDrop(false);
         moveTask(draggedTask, state);
        setDraggedTask(null);
        
@@ -54,13 +56,13 @@ const moveTask = useStore((store) => store.moveTask);
      {/*rendered conditionally "if not open don't render*/}
      {open && (
        <div className="absolute bg-black/30 w-full h-full top-0 left-0">
-       <div className="absolute bg-white  z-[1] p-5 top-[70%] translate-x-[-50%] left-[50%] h-12 w-80 flex justify-center items-center rounded-md">
-         <input onChange={(e) => setText(e.target.value)} value={text} />
+       <div className="absolute bg-primary  z-[1] p-5 top-[70%] translate-x-[-50%] left-[50%] h-12 w-80 flex justify-center items-center rounded-md">
+         <input onChange={(e) => setText(e.target.value)} value={text} className="outline-none rounded-sm"/>
          <button onClick={() => {
            addTask(text, state);
            setText("");
            setOpen(false)
-         }}>Submit</button>
+         }} className="bg-gray-300 p-1 rounded-md ml-3 text-sm">Submit</button>
        </div>
      </div>
  
