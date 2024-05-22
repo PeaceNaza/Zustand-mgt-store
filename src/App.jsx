@@ -6,7 +6,7 @@ function App() {
 
   return (
     
-    <div className='container bg-tertiary min-h-screen min-w-screen flex justify-center items-start'>
+    <div className='container bg-tertiary min-h-screen min-w-full flex justify-center items-start'>
       
       <Column state="PLANNED" />
       <Column state="ONGOING" />
